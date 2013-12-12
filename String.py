@@ -100,3 +100,4 @@ def reDemo():
 	phonePattern = re.compile(r'^(\d{3})‐(\d{3})‐(\d{4})‐(\d+)$')
 	#result = phonePattern.search('800‐555‐1212-2122').groups()
 	#print(result)
+

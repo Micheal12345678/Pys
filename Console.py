@@ -1,6 +1,7 @@
 import Collection
 import OS
 import String
+import Plural
 
 #encoding: utf-8
 
@@ -33,12 +34,22 @@ import String
 # Collection.setResolved()
 
 
-String.formatDemo()
-print()
-String.stringOperation()
-print()
-String.stringSlicing()
-print()
-String.byteDemo()
-print()
-String.reDemo()
+# String.formatDemo()
+# print()
+# String.stringOperation()
+# print()
+# String.stringSlicing()
+# print()
+# String.byteDemo()
+# print()
+# String.reDemo()
+# print()
+
+
+#单数转复数，利用正则表达式
+#print(Plural.plural('crash'))
+#Plural.plural('sex')
+
+print(Plural.plural2('crash'))
+
+print('Page 195')
