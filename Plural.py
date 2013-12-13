@@ -28,10 +28,7 @@ def plural2(noun):
 		if matches_rule(noun):
 			return apply_rule(noun)
 
-rules = ((match_sxz, apply_sxz), 
-		 (match_h, apply_h),
-		 (match_y, apply_y),
-		 (match_default, apply_default))
+
 
 def match_sxz(noun):
 	return re.search('[sxz]$', noun)
@@ -49,4 +46,18 @@ def match_default(noun):
 	return True
 def apply_default(noun):
 	return noun + 's'
+
+#函数列表
+rules = ((match_sxz, apply_sxz), 
+		 (match_h, apply_h),
+		 (match_y, apply_y),
+		 (match_default, apply_default))
+
+#匹配模式列表
+def build_match_and_apply_functions(pattern, search, replace):
+	def matches_rule(word):
+		return re.search(pattern, word)
+	def apply_rule(word):
+		return re.sub(search, replace, word)
+	return (matches_rule, apply_rule)
 
